@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TransferApp
-//
-//  Created by Юрий Яковлев on 18.10.2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

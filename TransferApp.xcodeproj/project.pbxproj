@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC6D72C02904661F00F00D36 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6D72BF2904661F00F00D36 /* SecondViewController.swift */; };
 		CCD03E2028FECC6F003CB607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD03E1F28FECC6F003CB607 /* AppDelegate.swift */; };
 		CCD03E2228FECC6F003CB607 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD03E2128FECC6F003CB607 /* SceneDelegate.swift */; };
 		CCD03E2428FECC6F003CB607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD03E2328FECC6F003CB607 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC6D72BF2904661F00F00D36 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CCD03E1C28FECC6F003CB607 /* TransferApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransferApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD03E1F28FECC6F003CB607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD03E2128FECC6F003CB607 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CCD03E2828FECC6F003CB607 /* Assets.xcassets */,
 				CCD03E2A28FECC6F003CB607 /* LaunchScreen.storyboard */,
 				CCD03E2D28FECC6F003CB607 /* Info.plist */,
+				CC6D72BF2904661F00F00D36 /* SecondViewController.swift */,
 			);
 			path = TransferApp;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6D72C02904661F00F00D36 /* SecondViewController.swift in Sources */,
 				CCD03E2428FECC6F003CB607 /* ViewController.swift in Sources */,
 				CCD03E2028FECC6F003CB607 /* AppDelegate.swift in Sources */,
 				CCD03E2228FECC6F003CB607 /* SceneDelegate.swift in Sources */,
