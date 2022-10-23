@@ -3,7 +3,8 @@ import UIKit
 class SecondViewController: UIViewController {
     var updatingData: String = ""
     var handleUpdatedDataDelegate: DataUpdateProtocol?
-
+    var completionHandler: ((String) -> Void)?
+    
     @IBOutlet var dataTextField: UITextField!
     
     override func viewDidLoad() {
@@ -12,24 +13,24 @@ class SecondViewController: UIViewController {
     }
     
     // MARK: - Переход между сценами и сохранение данных с использованием свойства
-
+    
     @IBAction func saveDataWithProperty(_ sender: UIButton) {
         self.navigationController?.viewControllers.forEach { viewController in
             (viewController as? ViewController)?.updatedDate = dataTextField.text ?? ""
         }
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateTextFieldData(withText: updatingData)
     }
-
+    
     private func updateTextFieldData(withText text: String) {
         dataTextField.text = text
     }
-
+    
     // MARK: - Переход между сценами и сохранение данных с использованием segue
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "toFirstScreen":
@@ -38,19 +39,27 @@ class SecondViewController: UIViewController {
             break
         }
     }
-
+    
     private func prepareFirstScreen(_ segue: UIStoryboardSegue) {
         guard let destinationController = segue.destination as? ViewController else {
             return
         }
         destinationController.updatedDate = dataTextField.text ?? ""
     }
-
+    
     // MARK: - Переход между сценами и сохранение данных с помощью делегирования
-
+    
     @IBAction func saveDataWithDelegate(_ sender: UIButton) {
         let updatedData = dataTextField.text ?? ""
         handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        navigationController?.popViewController(animated: true)
+    }
+
+    // MARK: - Переход между сценами и сохранение данных с помощью замыкания
+
+    @IBAction func saveDataWithClosure(_ sender: UIButton) {
+        let updatedData = dataTextField.text ?? ""
+        completionHandler?(updatedData)
         navigationController?.popViewController(animated: true)
     }
 }
