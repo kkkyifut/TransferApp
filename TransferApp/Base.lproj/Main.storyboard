@@ -46,17 +46,32 @@
                                     <segue destination="FFO-n2-Me7" kind="show" identifier="toEditScreen" id="YkD-HA-LX7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-5N-sGy">
+                                <rect key="frame" x="30" y="606" width="330" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Изменить с помощью делагата">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htn-PK-HDM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="Ve7-qf-oUf" firstAttribute="top" secondItem="mur-3m-V7d" secondAttribute="bottom" constant="30" id="8za-NP-6DS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gKH-5N-sGy" secondAttribute="trailing" constant="30" id="A85-fx-7Sp"/>
                             <constraint firstItem="mur-3m-V7d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AC2-lH-XRb"/>
                             <constraint firstItem="bFO-Za-JRx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Dnx-Lz-fjo"/>
                             <constraint firstItem="bFO-Za-JRx" firstAttribute="top" secondItem="Ve7-qf-oUf" secondAttribute="bottom" constant="30" id="Ike-pS-Utw"/>
                             <constraint firstItem="mur-3m-V7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Se4-1t-YaB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bFO-Za-JRx" secondAttribute="trailing" constant="30" id="Tlk-Uz-xrH"/>
                             <constraint firstItem="Ve7-qf-oUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XqV-QX-7bI"/>
+                            <constraint firstItem="gKH-5N-sGy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gF5-AN-Kte"/>
+                            <constraint firstItem="gKH-5N-sGy" firstAttribute="top" secondItem="bFO-Za-JRx" secondAttribute="bottom" constant="30" id="vga-uZ-tZc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ve7-qf-oUf" secondAttribute="trailing" constant="30" id="wtG-vA-72N"/>
                         </constraints>
                     </view>
@@ -107,13 +122,27 @@
                                     <segue destination="cHb-mc-Dnt" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="95c-oR-mQP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6Y-8y-qbp">
+                                <rect key="frame" x="30" y="605" width="330" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Сохранить с помощью делегата">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.54102578531412571" green="0.0" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithDelegate:" destination="FFO-n2-Me7" eventType="touchUpInside" id="1zR-JU-6tr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iez-Io-bNS"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="iez-Io-bNS" firstAttribute="trailing" secondItem="7ml-MN-elv" secondAttribute="trailing" constant="30" id="0kU-3c-Lpo"/>
+                            <constraint firstItem="R6Y-8y-qbp" firstAttribute="leading" secondItem="iez-Io-bNS" secondAttribute="leading" constant="30" id="1Sd-9P-iTN"/>
                             <constraint firstItem="iez-Io-bNS" firstAttribute="trailing" secondItem="le2-RU-wM7" secondAttribute="trailing" constant="30" id="4Qd-jC-hDt"/>
                             <constraint firstItem="7ml-MN-elv" firstAttribute="leading" secondItem="iez-Io-bNS" secondAttribute="leading" constant="30" id="65d-rn-eJp"/>
+                            <constraint firstItem="iez-Io-bNS" firstAttribute="trailing" secondItem="R6Y-8y-qbp" secondAttribute="trailing" constant="30" id="6yx-3Z-HBZ"/>
                             <constraint firstItem="uVu-zU-hRc" firstAttribute="top" secondItem="le2-RU-wM7" secondAttribute="bottom" constant="30" id="7IE-7O-9GY"/>
                             <constraint firstItem="le2-RU-wM7" firstAttribute="centerX" secondItem="tGL-21-D9S" secondAttribute="centerX" id="HcT-Iy-RgR"/>
                             <constraint firstItem="le2-RU-wM7" firstAttribute="centerY" secondItem="tGL-21-D9S" secondAttribute="centerY" id="NkJ-1a-Etp"/>
@@ -122,6 +151,7 @@
                             <constraint firstItem="7ml-MN-elv" firstAttribute="top" secondItem="uVu-zU-hRc" secondAttribute="bottom" constant="30" id="kSZ-iu-zbz"/>
                             <constraint firstItem="le2-RU-wM7" firstAttribute="centerX" secondItem="tGL-21-D9S" secondAttribute="centerX" id="oxD-Qh-VEU"/>
                             <constraint firstItem="uVu-zU-hRc" firstAttribute="leading" secondItem="iez-Io-bNS" secondAttribute="leading" constant="30" id="plS-W7-n7A"/>
+                            <constraint firstItem="R6Y-8y-qbp" firstAttribute="top" secondItem="7ml-MN-elv" secondAttribute="bottom" constant="30" id="uMI-ag-ZBI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Сцена Б" largeTitleDisplayMode="always" id="PUL-T4-ut4"/>
@@ -159,6 +189,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

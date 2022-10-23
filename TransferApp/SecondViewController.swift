@@ -2,6 +2,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     var updatingData: String = ""
+    var handleUpdatedDataDelegate: DataUpdateProtocol?
 
     @IBOutlet var dataTextField: UITextField!
     
@@ -43,5 +44,13 @@ class SecondViewController: UIViewController {
             return
         }
         destinationController.updatedDate = dataTextField.text ?? ""
+    }
+
+    // MARK: - Переход между сценами и сохранение данных с помощью делегирования
+
+    @IBAction func saveDataWithDelegate(_ sender: UIButton) {
+        let updatedData = dataTextField.text ?? ""
+        handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        navigationController?.popViewController(animated: true)
     }
 }

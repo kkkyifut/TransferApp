@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataUpdateProtocol {
     var updatedDate = "Test Data"
     @IBOutlet var dataLabel: UILabel!
 
@@ -49,5 +49,20 @@ class ViewController: UIViewController {
             return
         }
         destinationController.updatingData = dataLabel.text ?? ""
+    }
+
+    // MARK: - Переход между сценами и сохранение данных с помощью делегирования
+
+    @IBAction func editDataWithDelegate(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        editScreen.updatingData = dataLabel.text ?? ""
+        editScreen.handleUpdatedDataDelegate = self
+        self.navigationController?.pushViewController(editScreen, animated: true)
+    }
+
+    func onDataUpdate(data: String) {
+        updatedDate = data
+        updateLabel(withText: data)
     }
 }
